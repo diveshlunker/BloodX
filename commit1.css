@@ -1,0 +1,27 @@
+
+#nav{
+  height: 60px;
+  background-color: transparent;
+  width: inherit;
+  text-align: center;
+  padding-top: 50px;
+}
+ul{
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+}
+li{
+  display: inline;
+  padding-left: 0px;
+  padding-right: 20px;
+  text-decoration: none;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+}
+li a{
+  text-decoration: none;
+  color:#111;
+}
