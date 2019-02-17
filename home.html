@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid ">
+        <div class="navbar-header">
+          <a class="navbar-brand"  href="#">Blood-X</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#">Home</a></li> -->
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Join Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="text-main">
+      <h2><i>With the hands, Let the blood connect!!</i></h2>
+      <h3><i>Connect with Blood-X Now..</i></h3>
+    </section>
+
+
+    <div class="slideshow-container">
+
+<div class="mySlides">
+  <q>I have nothing to offer but blood, toil, tears and sweat</q>
+  <p class="author">- Winston Churchill</p>
+</div>
+
+<div class="mySlides">
+  <q>The best blood will at some time get into a fool or a mosquito.</q>
+  <p class="author">- Austin O’Malley</p>
+</div>
+
+<div class="mySlides">
+  <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+  <p class="author">- Thomas A. Edison</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+  </body>
+</html>
