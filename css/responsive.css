@@ -1,0 +1,75 @@
+
+/* responsive css*/
+
+@media (min-width:992px) and (max-width:1199px) {
+
+.single_team_img img{
+	width:100%;
+}
+
+	
+	
+	
+}
+
+/* Tabe Screen Media */
+
+@media (min-width: 769px) and (max-width: 991px){
+
+
+.sinle_features {
+    padding: 50px 0px;
+	width: 60%;
+	margin:0 auto;
+}
+
+.single_blog_overlay {
+    padding: 15px 10px;
+}
+
+.main_steps_content:after{
+   display:none;
+}
+	
+	
+}
+
+/* Mobile Phone Screen Media */
+
+@media (max-width: 768px){
+	
+.single_service {
+    color: #000;
+    margin-top: 5%;
+    display: inline-block;
+}
+.single_service h4 {
+    color:#e84c3d;
+	margin-top: 50px;
+}
+
+.single_service p {
+    color: #e84c3d;
+}
+.single_blog_overlay {
+    padding: 45px 20px;
+}
+.sinle_counter {
+    text-align: center;
+	margin-top:30px;
+}
+.sinle_counter .separetorwhite {
+    border-bottom: 3px solid #fff;
+    overflow: hidden;
+    padding: 2px 0px;
+    width: 10%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.main_steps_content:after{
+   display:none;
+}
+	
+	
+	
+}
