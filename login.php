@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Login PopUp</title>
-        <link rel="stylesheet" type="text/css" href="login2.css">
+        <link rel="stylesheet" type="text/css" href="css2/login2.css">
     </head>
     <body>
           <div class="wrapper">
@@ -33,5 +33,45 @@
 
 include('dbcon.php');
 
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    
+    $qrysearch = "SELECT * FROM `users` WHERE `email` = '$email' AND `password`='$pass' ";
+    $run = mysqli_query($con,$qrysearch);
+    if(mysqli_num_rows($run)<=0){
+        $qrysearchorg = "SELECT * FROM `organization` WHERE `email` = '$email' AND `password`='$pass' ";
+        $runorg = mysqli_query($con,$qrysearchorg);
+        if(mysqli_num_rows($runorg)<=0){
+            $qrysearchspon = "SELECT * FROM `sponsers` WHERE `email` = '$email' AND `password`='$pass' ";
+            $runspon = mysqli_query($con,$qrysearchspon);
+            if(mysqli_num_rows($runspon)<=0){
+                $qrysearchadmin = "SELECT * FROM `admin` WHERE `email` = '$email' AND` password`='$pass' ";
+                $runadmin = mysqli_query($con,$qrysearchadmin);
+                if(mysqli_num_rows($runorg)<=0){
+                    ?>
+                    <script>
+                        alert("Incorrect Id Or Password! Try Again");
+                    </script>
+<?php
+                }
+                else{
+                    header('location:admin/dash.php');
+                }
+            }
+            else{
+                header('location:spon/dash.php');
+            }
+        }
+        else{
+            header('location:org/dash.php');
+        }
+    }
+    else{
+        header('location:users/home.php');
+    }
+    
+    
+}
 
 ?>

@@ -7,20 +7,21 @@
           <div class="wrapper">
     <div class="container">
       <br><br>
-      <div class="signup"><hr>Sign Up<hr></div>
+      <div class="signup"><hr>Organizations Sign Up<hr></div>
       
       
-        <form action="signup.php" method="post">
+        <form action="orglogin.php" method="post">
             <div class="signup-form" >
               <input type="text" placeholder="Your Username" name="name" class="input" required><br />
               <input type="text" placeholder="Phone Number" name="number" class="input" required><br />
-              <input type="text" placeholder="State" name="state" class="input" required><br />
-                <input type="text" placeholder="Blood Group" name="bloodgroup" class="input" required><br />
+              <input type="text" placeholder="Organization Address" name="address" class="input" required><br />
+                <input type="text" placeholder="City" name="city" class="input" required><br />
               <input type="text" placeholder="Your Email Address" name="email" class="input" required><br />
               <input type="password" placeholder="Create Password" name="password" class="input" required><br />
+               
               <input type="submit" class="btn" name="submit" value="Create account"/><br>
               <h2><a href="login.php" class="alreadyid">Already Have Id? Login Here</a></h2><br>
-              <h2><a href="orglogin.php" class="alreadyid">Organizations: Signup Here</a></h2>
+              
             </div>
         </form>
       
@@ -38,19 +39,16 @@ include('dbcon.php');
 
 if(isset($_POST['submit'])){
     
-    
-    
-    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $pass = $_POST['password']; 
-    $state = $_POST['state'];
+    $address = $_POST['address'];
     $number = $_POST['number'];
-    $bggroup = $_POST['bloodgroup'];
+    $city = $_POST['city'];
 
 
     
-    $qrysearch = "SELECT * FROM `users` WHERE `email` = '$email' ";
+    $qrysearch = "SELECT * FROM `organization` WHERE `email` = '$email' ";
     
 
     
@@ -60,21 +58,21 @@ if(isset($_POST['submit'])){
         ?>
         <script>
             alert('Id already exist! Try Logging In:)');
-            window.location.href = "login.php";
+            window.location.href = "orglogin.php";
             
         </script>
         <?php
         
     }
     else{
-        $qry = "INSERT INTO `users`(`name`, `email`, `password`,`state`,`bloodgroup`,`number`) VALUES ('$name','$email','$pass','$state','$bggroup','$number')";
+        $qry = "INSERT INTO `organization`(`name`, `email`, `password`,`city`,`address`,`number`) VALUES ('$name','$email','$pass','$city','$address','$number')";
         
         $runqry = mysqli_query($con,$qry);
         if($runqry == true){
         ?>
             <script>
                 alert('Your Id has been successfully created. Login to continue');
-                windows.location.href = "login.php";
+                windows.location.href = "http://localhost/osp/orglogin.php";
             </script>
 <?php
             
