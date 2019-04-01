@@ -11,7 +11,7 @@ body{
 
 .container{
   width: 450px;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 .signup{
@@ -35,12 +35,12 @@ body{
   clear: both;
   width: 100%;
   box-sizing: border-box;
-  height: 450px;
+  height: 650px;
 }
 
 .input{
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
   margin-bottom: 25px;
   border: 2px solid #e9eaea;
