@@ -1,9 +1,9 @@
 # BloodX
 An standalone platform which lets donors, receivers, organizers and sponsers to merge.
 
-
-</br>
+<br>
 Check it out <a href="https://diveshlunker.github.io/BloodX/index.html">here.</a>
+<br><hr>
 
 <h1><b>Functionalities</b></h1>
 <h2><b>Admin</b></h2>
