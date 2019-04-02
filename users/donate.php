@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if(isset($_SESSION['uid']))
+{
+    echo "";
+}
+else{
+    header('location: ../login.php');
+}
+
+?>
+
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="style.css">

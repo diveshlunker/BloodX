@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['uid']))
+{
+    header('location:users/home.php');
+}
+?>
+
 <html>
     <head>
         <title>Login PopUp</title>

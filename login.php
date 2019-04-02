@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['uid']))
+{
+    header('location:users/home.php');
+}
+?>
+
 <html>
     <head>
         <title>Login PopUp</title>
@@ -40,15 +50,19 @@ if(isset($_POST['submit'])){
     $qrysearch = "SELECT * FROM `users` WHERE `email` = '$email' AND `password`='$pass' ";
     $run = mysqli_query($con,$qrysearch);
     if(mysqli_num_rows($run)<=0){
+        
         $qrysearchorg = "SELECT * FROM `organization` WHERE `email` = '$email' AND `password`='$pass' ";
         $runorg = mysqli_query($con,$qrysearchorg);
         if(mysqli_num_rows($runorg)<=0){
+            
             $qrysearchspon = "SELECT * FROM `sponsers` WHERE `email` = '$email' AND `password`='$pass' ";
             $runspon = mysqli_query($con,$qrysearchspon);
             if(mysqli_num_rows($runspon)<=0){
+                
                 $qrysearchadmin = "SELECT * FROM `admin` WHERE `email` = '$email' AND` password`='$pass' ";
                 $runadmin = mysqli_query($con,$qrysearchadmin);
-                if(mysqli_num_rows($runorg)<=0){
+                if(mysqli_num_rows($runadmin)<=0){
+                    
                     ?>
                     <script>
                         alert("Incorrect Id Or Password! Try Again");
@@ -56,19 +70,45 @@ if(isset($_POST['submit'])){
 <?php
                 }
                 else{
+                    $data = mysqli_fetch_assoc($runadmin);
+                    $id = data['id'];
+                    $_SESSION['uid'] = $id;
                     header('location:admin/dash.php');
                 }
             }
             else{
+                $data = mysqli_fetch_assoc($runspon);
+                $id = data['id'];
+                $_SESSION['uid'] = $id;
                 header('location:spon/dash.php');
             }
         }
         else{
-            header('location:org/dash.php');
+            $data = mysqli_fetch_assoc($runorg);
+            $id = data['id'];
+            $_SESSION['uid'] = $id;
+            ?>
+            <script>
+                
+                window.open('org/dash.php?sid=<?php echo $id;?>','self');
+                
+                </script>
+
+<?php
         }
     }
     else{
-        header('location:users/home.php');
+        $data = mysqli_fetch_assoc($run);
+        $id = data['id'];
+        $_SESSION['uid'] = $id;
+        ?>
+            <script>
+                
+                window.open('users/dash.php?sid=<?php echo $id;?>','self');
+                
+                </script>
+
+<?php
     }
     
     
