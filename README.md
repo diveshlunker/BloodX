@@ -2,7 +2,7 @@
 An standalone platform which lets donors, receivers, organizers and sponsers to merge.
 
 <br>
-Check it out <a href="https://diveshlunker.github.io/BloodX/index.html">here.</a>
+Check it out <a href="https://diveshlunker.github.io/BloodX/index.html">here.</a><br>
 The website is not launched yet hence, the login signup page wont be working in case if you run it from the link above.
 Clone/Fork the project and create mysql database and see it run properly.
 <br><hr>
@@ -23,5 +23,5 @@ Users / Donators / Receivers can create their id and get notified of all the upc
 Import the Sql file within the sql directory in PHP My Admin and the database and all the tables will be created.
 <br><hr>
 <h1><b>Contribute</b></h1>
-This website is under development and any contibution will be appreciated.
+This website is under development and any contibution will be appreciated.<br>
 Any issues found can be submitted and it will be responded soon.
