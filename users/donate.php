@@ -1,16 +1,29 @@
+<?php
+
+session_start();
+if(isset($_SESSION['uid']))
+{
+    echo "";
+}
+else{
+    header('location: ../login.php');
+}
+
+?>
+
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="style.css">
-
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <body>
         
         
-        <ul id="myDIV">
+        <ul id="myDIV" style="text-align:center;">
             <li><h1>Welcome <?php echo"Divesh"?></h1></li>
             <li><hr></li>
             
             
-            <li><a href="home.php">
+            <li><a class="navbar" href="home.php">
               Home</a></li>
             <li><a class="navbar active" href="donate.php">Donate</a></li>
             <li><a class="navbar" href="request.php">Find Donar</a></li>
@@ -20,14 +33,16 @@
         </ul>
         
         
+  <div class="container">
+      
         
-<br><h1 align="center">Donate Blood Nearby..</h1><br>
-<table align="center">
+        <br><h1 align="center">Donate Blood Nearby..</h1><br>
+<table align="center" class="searchgroup right2 table table-hover">
+    
+    
 <form action="donate.php" method="post">
     <tr>
-        <th>
-            Enter Blood Group
-        </th>
+        
         <td>
             <input type="text" name="city" placeholder="Enter City" required="required"/>
         </td>
@@ -41,7 +56,7 @@
 </table>
 <br>
 
-<table align="center" width="80%" border="1" style:"margin-top:10px;">
+<table align="center" width="80%" border="2" style:"margin-top:10px;" class="dataprovided2 table table-hover">
     <tr style="background-color:#000; color:#fff; ">
         <th>No.</th>
         <th>Organization</th>
@@ -76,7 +91,7 @@
             while($data=mysqli_fetch_assoc($run)){
                 $count++;
                 ?>
-                <tr align="center">
+                <tr>
                     <td><?php echo $count;?></td>
                     <td><?php echo $data['name'] ?> </td>
                     <td><?php echo $data['address']; ?></td>
@@ -95,6 +110,9 @@
 ?>
     
 </table>
+        
+        </div>      
+
 
 
       </body>

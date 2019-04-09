@@ -1,0 +1,177 @@
+@media (min-width:1150px) and (max-width:1299px){
+    
+    h2{
+        font-size: 46px;
+        
+    }
+    h3{
+        font-size: 33px;
+    }
+    h4{
+        font-size: 23px; 
+    }
+    h5{
+        font-size: 18px;
+    }
+    .split{
+        margin-top: 20%;
+    }
+    
+}
+
+
+
+
+
+/*Tab Screen Media*/
+
+@media (min-width: 1000px) and (max-width: 1150px){
+    h2{
+        font-size:40px;
+        
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 21px;
+    }
+    h5{
+        font-size: 17px;
+    }
+    .split{
+        margin-top: 23%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+}
+
+
+@media (min-width: 800px) and (max-width: 1000px){
+    h2{
+        font-size:38px;
+        
+    }
+    h3{
+        font-size: 29px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .split{
+        margin-top: 27%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 800px){
+    h2{
+        font-size:38px;
+        
+    }
+    h3{
+        font-size: 29px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .split{
+        margin-top: 30%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 768px){
+    h2{
+        font-size:38px;
+        
+    }
+    h3{
+        font-size: 29px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .split{
+        margin-top: 36%;
+        width:100%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+    .left{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 600px){
+    h2{
+        font-size:28px;
+        
+    }
+    h3{
+        font-size: 23px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 13px;
+    }
+    .split{
+        margin-top: 40%;
+        width:100%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+    .left{
+        display: none;
+    }
+    
+}
+
+
+
+@media (max-width: 600px) and (max-height: 600px){
+    h2{
+        font-size:28px;
+        
+    }
+    h3{
+        font-size: 23px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 13px;
+    }
+    .split{
+        margin-top: 30%;
+        width:100%;
+    }
+    #intro{
+        margin-top: 20%;
+    }
+    .left{
+        display: none;
+    }
+    
+}
