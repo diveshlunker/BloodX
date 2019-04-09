@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if(isset($_SESSION['uid']))
+{
+    echo "";
+}
+else{
+    header('location: ../login.php');
+}
+
+?>
+
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,24 +25,25 @@
             
             <li><a href="home.php">
               Home</a></li>
-            <li><a class="navbar active" href="donate.php">Donate</a></li>
+            <li><a class="navbar" href="donate.php">Donate</a></li>
             <li><a class="navbar" href="request.php">Find Donar</a></li>
-            <li><a class="navbar" href="availability.php">Availability</a></li>
+            <li><a class="navbar active" href="availability.php">Availability</a></li>
             <li><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr></li>
             <li><a class="navbar" href="logout.php">Logout</a></li>
         </ul>
         
-        
-        
-<br><h1 align="center">Donate Blood Nearby..</h1><br>
+
+
+
+<br><h1 align="center">Availability Of Blood</h1><br>
 <table align="center">
-<form action="donate.php" method="post">
+<form action="availability.php" method="post">
     <tr>
         <th>
             Enter Blood Group
         </th>
         <td>
-            <input type="text" name="city" placeholder="Enter City" required="required"/>
+            <input type="text" name="bgrp" placeholder="Enter Blood Group" required="required"/>
         </td>
     
     
@@ -46,11 +60,8 @@
         <th>No.</th>
         <th>Organization</th>
         <th>Address</th>
-        <th>City</th>
-        <th>Contact Number</th>
-        <th>Contact Email</th>
-        <th>Date</th>
-        <th>Time</th>
+        <th>Blood Group</th>
+        <th>Available Units</th>
         
         
     </tr>
@@ -60,16 +71,14 @@
     if(isset($_POST['submit'])){
         include('../dbcon.php');
 
-        
-        $city = $_POST['city'];
-        
+        $bgroup=$_POST['bgrp'];
 
-        $sql = "SELECT * FROM `blood camps` WHERE `city`='$city'"; 
+        $sql = "SELECT * FROM `availability` WHERE `bloodgroup`='$bgroup'"; 
 
         $run=mysqli_query($con, $sql);
 
         if(mysqli_num_rows($run)<1){
-            echo "<tr><td colspan='8'>No Records Found</td></tr>";
+            echo "<tr><td colspan='5'>No Records Found</td></tr>";
         }
         else{
             $count=0;
@@ -78,14 +87,10 @@
                 ?>
                 <tr align="center">
                     <td><?php echo $count;?></td>
-                    <td><?php echo $data['name'] ?> </td>
+                    <td><?php echo $data['organization'] ?> </td>
                     <td><?php echo $data['address']; ?></td>
-                    <td><?php echo $data['city']; ?></td>
-                    <td><?php echo $data['number']; ?></td>
-                    <td><?php echo $data['email']; ?></td>
-                    <td><?php echo $data['date']; ?></td>
-                    <td><?php echo $data['time']; ?></td>
-                    
+                    <td><?php echo $data['bloodgroup']; ?></td>
+                    <td><?php echo $data['Units']; ?></td>
                 </tr>
 
         <?php
@@ -100,4 +105,3 @@
       </body>
     </head>
 </html>
-    

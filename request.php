@@ -1,6 +1,20 @@
+<?php
+
+session_start();
+if(isset($_SESSION['uid']))
+{
+    echo "";
+}
+else{
+    header('location: ../login.php');
+}
+
+?>
+
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <body>
         
@@ -19,17 +33,37 @@
             <li><a class="navbar" href="logout.php">Logout</a></li>
         </ul>
         
-        <section class="right">
-            <section class="header">
-                <h1>Request Blood</h1>
+         <div class="container">
+        
+            <br><h1 align="center">Donate Blood Nearby..</h1><br>
                 <h2>Hope you do the same work which you expect others to do now</h2>
-            </section>
-            <section class="searchGroup">
+            
+            <table align="center" class="searchGroup right2 table table-hover">
                 <form action="request.php" method="post">
-                    <input type="text" name="name" placeholder="Enter Your Name"/>
-                    <input type="text" name="phone" placeholder="Phone Number"/>
-                    <input type="text" name="bgroup" placeholder="Blood Group"/>
+                    
+                    <tr>
+                        
+                        <td>
+                            <input type="text" name="city" placeholder="Enter your Name" required="required"/>
+                        </td>
+                        <td>
+                            <input type="text" name="name" placeholder="Your Name"/>
+                        </td>
+                        <td>
+                            <input type="text" name="bgroup" placeholder="Blood Group"/>
+                        </td>
+                        <td colspan="1"><input type="submit" name="submit" value="Search"/></td>
 <!--
+                        </td>
+
+
+                        <td colspan="1"><input type="submit" name="submit" value="Search"/></td>
+                    </tr>
+                    
+                    
+                    <input type="text" name="name" placeholder="Enter Your Name"/>
+                    
+                    
                     <select name="bgroup">
                             <option value="1">A+</option>
                             <option value="2">A-</option>
@@ -41,11 +75,11 @@
                             <option value="8">AB-</option>
                         </select>
 -->
-                    <input type="submit" name="submit" value="submit"/>
+                    </tr>
                 </form>
                 
-            </section>
-        </section>
+            </table>
+        <br>
       
 <table align="center" width="80%" border="1" class="dataprovided">
     <tr style="background-color:#000; color:#fff; ">
@@ -95,6 +129,7 @@
                 
                 ?>
 </table>
+        </div>
     
       </body>
     </head>

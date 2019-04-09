@@ -1,16 +1,3 @@
-<?php
-
-session_start();
-if(isset($_SESSION['uid']))
-{
-    echo "";
-}
-else{
-    header('location: ../login.php');
-}
-
-?>
-
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -20,19 +7,7 @@ else{
         
         <ul id="myDIV">
             
-            
-            <li><h1>Welcome <?php
-                include('../dbcon.php');
-                $id = $_GET['sid'];
-//                
-//                $sql = "SELECT * FROM `users` WHERE `id` = '$id'";
-//                $run = mysqli_query($con,$sql);
-//                $data = mysqli_fetch_assoc($run);
-                
-                echo $id;
-
-                
-                ?></h1></li>
+            <li><h1>Welcome <?php echo"Divesh"?></h1></li>
             <li><hr></li>
             
             <li><a class="navbar active" href="home.php">
