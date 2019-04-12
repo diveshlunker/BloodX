@@ -4,7 +4,7 @@ An standalone platform which lets donors, receivers, organizers and sponsers to 
 <br>
 Check it out <a href="https://diveshlunker.github.io/BloodX/index.html">here.</a><br>
 The website is not launched yet hence, the login signup page wont be working in case if you run it from the link above.
-Clone/Fork the project and create mysql database and see it run properly.
+Fork the project, clone then and create mysql database and see it run properly.
 <br><hr>
 
 <h1><b>Functionalities</b></h1>
@@ -20,7 +20,15 @@ Users / Donators / Receivers can create their id and get notified of all the upc
 <br><br><hr>
 <h1><b>Database Connection</b></h1>
 
-Import the Sql file within the sql directory in PHP My Admin and the database and all the tables will be created.
+Import the Sql file within the sql directory in PHP My Admin and the database and all the tables will be created.<br>
+Here,
+<li>My data-base name is <b><i>OSP</i></b></li>
+<li>Id for my database(php my admin) is <b><i>root</b></i></li>
+<li>Password for my database(php my admin) is <b><i>""</b></i>(Its empty)</li>
+
+<br>
+In case you have different credentials and database name, edit it in ,b><i>dbcon.php</i></b> and everything then works fine.
+
 <br><hr>
 <h1><b>Contribute</b></h1>
 This website is under development and any contibution will be appreciated.<br>
