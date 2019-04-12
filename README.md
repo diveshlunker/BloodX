@@ -27,7 +27,7 @@ Here,
 <li>Password for my database(php my admin) is <b><i>" "</i></b>(Its empty)</li>
 
 <br>
-In case you have different credentials and database name, edit it in ,b><i>dbcon.php</i></b> and everything then works fine.
+In case you have different credentials and database name, edit it in <b><i>dbcon.php</i></b> and everything then works fine.
 
 <br><hr>
 <h1><b>Contribute</b></h1>
