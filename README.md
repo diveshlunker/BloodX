@@ -24,7 +24,7 @@ Import the Sql file within the sql directory in PHP My Admin and the database an
 Here,
 <li>My data-base name is <b><i>OSP</i></b></li>
 <li>Id for my database(php my admin) is <b><i>root</b></i></li>
-<li>Password for my database(php my admin) is <b><i>""</b></i>(Its empty)</li>
+<li>Password for my database(php my admin) is <b><i>" "</i></b>(Its empty)</li>
 
 <br>
 In case you have different credentials and database name, edit it in ,b><i>dbcon.php</i></b> and everything then works fine.
