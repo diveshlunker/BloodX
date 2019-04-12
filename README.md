@@ -17,6 +17,10 @@ Organizations can set up their blood camp dates and let all the users can get no
 
 <h2><b>Users</b></h2>
 Users / Donators / Receivers can create their id and get notified of all the upcoming blood camps and blood receivers can get the information of the blood units which may be available in any of the hospitals and in case it is not available, get the information of the people having the blood of the blood group they are searching for.
+
+
+<h2><b>Sponsors</b></h2>
+Sponsors can sponsor the events from the main page of the website, but it is not been built yet. Just the basic design is been implemented. Any changes here are welcomed.
 <br><br><hr>
 <h1><b>Database Connection</b></h1>
 
